@@ -38,8 +38,8 @@ module.exports = () => {
         publicPath: '/',
         icons: [
           { // add sizes for icons
-            src: path.resolve('src/images/logo.png'),
-            sizes: [64, 128, 256, 512, 1024],
+            src: path.resolve('./src/images/logo.png'),
+            sizes: [96, 128, 256, 512, 1024],
             destination: path.join('assets', 'icons'),
           },
         ],
@@ -52,6 +52,11 @@ module.exports = () => {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
+        {
+          //Image loader
+          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+          type: "asset/resource",
+        }, 
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
