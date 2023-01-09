@@ -32,13 +32,14 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'Take notes with Javascript!',
-        background_color: '', // add color
-        theme_color: '',  // add color
+        background_color: '#B0E0E6', // add color
+        theme_color: '#B0E0E6',  // add color
         start_url: '/',
         publicPath: '/',
         icons: [
           { // add sizes for icons
             src: path.resolve('src/images/logo.png'),
+            sizes: [64, 128, 256, 512, 1024],
             destination: path.join('assets', 'icons'),
           },
         ],
